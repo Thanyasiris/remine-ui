@@ -7,6 +7,14 @@ import setting from '../images/setting.png'
 import add from '../images/add.png'
 import styled from "styled-components";
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2E2E3D; 
+`;
+
 const Button = styled.button`
   background-color: white;
   color: black;
@@ -14,6 +22,9 @@ const Button = styled.button`
   padding: 10px 60px;
   border-radius: 50px;
   margin: 10px 0px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
 `;
 
 const ImageIcon = styled.image`
@@ -22,23 +33,28 @@ const ImageIcon = styled.image`
 
 export default function Home() {
   return (
-    <div className='App'>
-      <Timer/>
-      <Button>
-        <img src={pillIcon} height={90} width={90} alt="Add New Pill Icon"/>
-        <p>
-          <img src={add}/>
-          ยาใหม
-        </p>
-      </Button>
-      
-      <Button>
-        <img src={settingIcon} height={90} width={90} alt="Setting Icon"/>
-        <p>
-          <img src={setting}/>
-          ตั้งค่า
-        </p>
-      </Button>
+    <div style={{backgroundColor: "#2E2E3D"}}>
+      <Timer />
+      <Container>
+        <Button>
+          <img src={pillIcon} height={90} width={90} alt="Add New Pill Icon" />
+          <p>
+            <img src={add} height={36} width={36} />
+            ยาใหม่
+          </p>
+        </Button>
+      </Container>
+
+      <Container>
+        <Button>
+          <img src={settingIcon} height={90} width={90} alt="Setting Icon" />
+          <p>
+            <img src={setting} height={36} width={36} />
+            ตั้งค่า
+          </p>
+        </Button>
+      </Container>
     </div>
+
   )
 }
