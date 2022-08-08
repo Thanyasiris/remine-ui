@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import NewMed from './pages/NewMed';
 import { BrowserRouter, Routes, Route,} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
